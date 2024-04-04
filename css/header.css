@@ -1,0 +1,20 @@
+/* 인포바 */
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #ededef;
+  margin: 0 20px 0 20px;
+}
+
+.info-bar__icons img,
+.info-bar__right_icons img {
+  width: 30px;
+}
+
+.info-bar__name {
+  font-size: 30px;
+  margin-left: 100px;
+  font-weight: bold;
+}
