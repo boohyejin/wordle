@@ -8,8 +8,8 @@ function appStart() {
   const displayGameover = () => {
     const div = document.createElement("div");
     div.innerText = "게임이 종료됐습니다.";
-    div.style =
-      "display:flex; justify-content:center; align-items:center; position:absolute; top:40vh; left:40vw; background-color:white; width:200px; height:100px;";
+
+    div.classList.add("game-over");
     document.body.appendChild(div);
   };
 
