@@ -1,5 +1,3 @@
-const 정답 = "APPLE";
-
 let attempts = 0; //줄
 let index = 0;
 let timer;
@@ -25,8 +23,14 @@ function appStart() {
     index = 0;
   };
 
-  const handleEnterKey = () => {
+  const handleEnterKey = async () => {
     let 맞은_갯수 = 0;
+
+    //서버에서 정답을 받아오는 코드
+    const 응답 = await fetch("/answer");
+    const 정답 = await 응답.json();
+    //awit 서버에서 서버로 요청을 보낸 다음에 그거에 대한 응답이 올때까지 기다리는 코드
+ 
     for (let i = 0; i < 5; i++) {
       const block = document.querySelector(
         `.board-block[data-index='${attempts}${i}']`
